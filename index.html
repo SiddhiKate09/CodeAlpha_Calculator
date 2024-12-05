@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+body{
+    background-color: grey;
+}
+ .mycontainer {
+    height: fit-content;
+    width: fit-content;
+    margin: 50px auto; 
+    border: 3px solid #333; 
+    background-color: #3e2723; 
+    padding: 20px;
+    border-radius: 15px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; 
+}
+
+.display {
+    width: 100%;
+    height: 50px;
+    background-color: #1e1e1e; 
+    color: white;
+    font-size: 2em; 
+    padding: 10px;
+    text-align: right;
+    border-radius: 10px; 
+    border: none;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; 
+}
+
+.row input {
+    margin: 5px;
+    padding: 12px;
+    width: 240px; 
+    font-size: 1.2em; 
+    border-radius: 5px; 
+    border: 2px solid #333; 
+    transition: border-color 0.3s ease;
+}
+
+.row input:focus {
+    border-color: #ffa726; 
+    outline: none;
+}
+
+button {
+    padding: 15px;
+    font-size: 1.5em; 
+    width: 70px; 
+    height: 70px; 
+    margin: 10px;
+    background-color: #ff7043; 
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+
+#deg-rad-toggle {
+    width: 70px;
+    height: 70px;
+    font-size: 0.7em; 
+}
+
+
+button:hover {
+    background-color: #ff5722; 
+    transform: translateY(-3px); 
+}
+
+button:active {
+    background-color: #e64a19; 
+    transform: translateY(1px); 
+}
+
+button:disabled {
+    background-color: #ccc; 
+    cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+    .mycontainer {
+        width: 90%; 
+        padding: 15px;
+    }
+
+    .display {
+        width: 100%; 
+        font-size: 1.5em; 
+    }
+
+    .row input {
+        width: 200px; 
+    }
+
+    button {
+        width: 60px; 
+        height: 60px;
+        font-size: 1.2em; 
+    }
+}
+
+  
+    </style>
+</head>
+<body>
+    <div class="mycontainer">
+        <div class="row">
+            <input class="input" type="text">
+        </div>
+        <div class="row">
+            <button class="button">(</button>
+            <button class="button">)</button>
+            <button class="button">%</button>
+            <button class="button">C</button>
+        </div>
+        <div class="row">
+            <button class="button">7</button>
+            <button class="button">8</button>
+            <button class="button">9</button>
+            <button class="button">/</button>
+        </div>
+        <div class="row">
+            <button class="button">4</button>
+            <button class="button">5</button>
+            <button class="button">6</button>
+            <button class="button">*</button>
+        </div>
+        <div class="row">
+            <button class="button">1</button>
+            <button class="button">2</button>
+            <button class="button">3</button>
+            <button class="button">-</button>
+        </div>
+        <div class="row">
+            <button class="button">sin</button>
+            <button class="button">cos</button>
+            <button class="button">tan</button>
+            <button class="button">ln</button>
+        </div>
+        <div class="row">
+            <button class="button">sinh</button>
+            <button class="button">cosh</button>
+            <button class="button">tanh</button> <button class="button" id="deg-rad-toggle">DEG/RAD</button>
+            
+        </div>
+        <div class="row">
+            <button class="button">0</button>
+           
+            <button class="button">=</button>
+            <button class="button">+</button>
+            <button class="button">.</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
